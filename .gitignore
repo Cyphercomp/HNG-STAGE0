@@ -18,3 +18,5 @@ media/
 # VS Code specific
 .vscode/
 *.code-workspace
+db.sqlite3
+*.vscode
