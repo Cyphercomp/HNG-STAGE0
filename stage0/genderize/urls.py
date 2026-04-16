@@ -6,5 +6,5 @@ router = DefaultRouter()
 router.register(r'', GenderizeViewSet, basename='classify')
 
 urlpatterns = [
-    path('api', include(router.urls)),
+    path('api/', include(router.urls)),
     ]

@@ -33,10 +33,10 @@ class GenderizeViewSet(viewsets.ViewSet):
             sample_size = data['count']
             is_confident = False
 
-            print(f"Probability: {probability}, Sample Size: {sample_size}")
+            
             if probability >= 0.8 and sample_size >= 100:
                 is_confident = True
-            print(f"Is Confident: {is_confident}")
+            
             payload = {
                 'status': 'success',
                 'data':{
@@ -48,7 +48,7 @@ class GenderizeViewSet(viewsets.ViewSet):
                     'processed_at': timezone.now().isoformat()  
                 }
             }
-            print(f"Payload: {payload}")
+            
         return Response(payload, status=status.HTTP_200_OK)
 
 # Create your views here.
